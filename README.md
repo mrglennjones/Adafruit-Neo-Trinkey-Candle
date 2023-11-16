@@ -1,3 +1,5 @@
+# Trinkandle
+
 # Adafruit-Neo-Trinkey-Candle
 A Flickering candle effect for the Adafruit Neo Trinkey in Circuit python
 
