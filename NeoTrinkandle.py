@@ -137,9 +137,28 @@ def candle_effect3():
 
         time.sleep(random.uniform(0.1, 0.5))  # Adjust the sleep duration to control the flicker speed
 
+def candle_effect4():
+    while True:
+        flicker = random.randint(5, 20)  # Random flicker value
+
+        # Fading effect with pixel index variation
+        for i in range(num_pixels):
+            intensity = random.randint(0, 255)
+            pixels[i % num_pixels] = fade_color((255, 150, 20), intensity)
+            pixels.show()
+            time.sleep(0.02)
+
+        # Random flickering
+        flicker = random.randint(1, 10)
+        for _ in range(flicker):
+            pixels.fill((255, 150, 20))
+            pixels.show()
+            time.sleep(random.uniform(0.01, 0.1))
+
+        time.sleep(random.uniform(0.1, 0.5))  # Adjust the sleep duration to control the flicker speed
 
 while True:
-    candle_effect3()
+    candle_effect4()
     #time.sleep(random.randint(0, 5))
     #candle_effect2()
     #time.sleep(random.randint(0, 5))
